@@ -20,6 +20,8 @@ import android.widget.ProgressBar;
 
 import static android.webkit.WebSettings.LOAD_NO_CACHE;
 
+import com.tencent.ilivesdk.ILiveSDK;
+
 public class TestActivity extends Activity {
 
     private int _R(String defType, String name) {
@@ -35,6 +37,10 @@ public class TestActivity extends Activity {
         setContentView(_R("layout", "layout_test"));
 
         Intent intent = getIntent();
+
+        ILiveSDK.getInstance().initSdk(getApplicationContext(), 1400033878, 13638);
+
+
 //        initView();
 
     }
