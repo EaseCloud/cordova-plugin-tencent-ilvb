@@ -31,7 +31,20 @@
       </feature>
     </config-file>
 
+    <!-- 腾讯直播 SDK -->
+    <source-file src="src/android/libs/cos-sdk-android-1.4.3.jar" target-dir="libs" />
+    <source-file src="src/android/libs/MobCommons-2017.0216.1054.jar" target-dir="libs" />
+    <source-file src="src/android/libs/MobTools-2017.0216.1054.jar" target-dir="libs" />
+    <source-file src="src/android/libs/sha1utils.jar" target-dir="libs" />
+    <source-file src="src/android/libs/ShareSDK-Core-2.8.1.jar" target-dir="libs" />
+    <source-file src="src/android/libs/ShareSDK-Wechat-2.8.1.jar" target-dir="libs" />
+    <source-file src="src/android/libs/ShareSDK-Wechat-Core-2.8.1.jar" target-dir="libs" />
+    <source-file src="src/android/libs/ShareSDK-Wechat-Favorite-2.8.1.jar" target-dir="libs" />
+    <source-file src="src/android/libs/ShareSDK-Wechat-Moments-2.8.1.jar" target-dir="libs" />
+
+    <!-- 源文件 -->
     <source-file src="src/android/TencentILVB.java" target-dir="src/cn/easecloud/cordova/tencent/"/>
+    <source-file src="src/android/res/values/strings.xml" target-dir="res/values" />
   </platform>
 
   <!--<platform name="ios">-->
