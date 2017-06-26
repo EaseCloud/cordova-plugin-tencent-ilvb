@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-        id="com.example.hello"
-        version="0.7.0">
+        id="cordova-plugin-tencent-ilvb"
+        version="0.1.0">
 
-  <name>Hello</name>
+  <name>TencentILVB</name>
+  <description>Tencent ILVB Plugin</description>
+  <license>Apache 2.0</license>
+  <keywords>cordova,live,video,tencent,qq,ilvb,lvb</keywords>
+  <repo>https://github.com/EaseCloud/cordova-plugin-tencent-ilvb.git</repo>
+  <issue>https://github.com/EaseCloud/cordova-plugin-tencent-ilvb/issues</issue>
+
 
   <engines>
     <engine name="cordova" version=">=3.4.0"/>
