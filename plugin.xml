@@ -17,8 +17,8 @@
 
   <asset src="www/ilvb.js" target="js/ilvb.js"/>
 
-  <js-module src="www/ilvb.js" name="hello">
-    <clobbers target="hello" />
+  <js-module src="www/ilvb.js" name="TencentILVB">
+    <clobbers target="TencentILVB" />
   </js-module>
 
   <platform name="android">
@@ -32,20 +32,20 @@
     <source-file src="src/android/Hello.java" target-dir="src/com/example/plugin/"/>
   </platform>
 
-  <platform name="ios">
-    
-    <config-file target="config.xml" parent="/widget">
-      <feature name="Hello">
-        <param name="ios-package" value="HWPHello" />
-      </feature>
-    </config-file>
+  <!--<platform name="ios">-->
+    <!---->
+    <!--<config-file target="config.xml" parent="/widget">-->
+      <!--<feature name="Hello">-->
+        <!--<param name="ios-package" value="HWPHello" />-->
+      <!--</feature>-->
+    <!--</config-file>-->
 
-    <header-file src="src/ios/HWPHello.h" target-dir="HelloPlugin"/>
-    <source-file src="src/ios/HWPHello.m" target-dir="HelloPlugin"/>
-  </platform>
+    <!--<header-file src="src/ios/HWPHello.h" target-dir="HelloPlugin"/>-->
+    <!--<source-file src="src/ios/HWPHello.m" target-dir="HelloPlugin"/>-->
+  <!--</platform>-->
 
-  <platform name="wp7">
-    <source-file src="src/wp7/Hello.cs"/>
-  </platform>
+  <!--<platform name="wp7">-->
+    <!--<source-file src="src/wp7/Hello.cs"/>-->
+  <!--</platform>-->
 
 </plugin>
