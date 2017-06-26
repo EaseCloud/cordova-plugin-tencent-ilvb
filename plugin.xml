@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
         id="cordova-plugin-tencent-ilvb"
         version="0.1.0">
 
@@ -44,7 +45,17 @@
 
     <!-- 源文件 -->
     <source-file src="src/android/TencentILVB.java" target-dir="src/cn/easecloud/cordova/tencent/"/>
+    <source-file src="src/android/TestActivity.java" target-dir="src/cn/easecloud/cordova/tencent/"/>
+    <source-file src="src/android/res/layout/layout_test.xml" target-dir="res/layout" />
     <source-file src="src/android/res/values/strings.xml" target-dir="res/values" />
+
+
+    <!-- Activity -->
+    <config-file parent="/manifest/application" target="AndroidManifest.xml">
+      <activity android:name="cn.easecloud.cordova.tencent.TestActivity">
+      </activity>
+    </config-file>
+
   </platform>
 
   <!--<platform name="ios">-->
