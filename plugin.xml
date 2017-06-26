@@ -12,12 +12,12 @@
 
 
   <engines>
-    <engine name="cordova" version=">=3.4.0"/>
+    <engine name="cordova" version=">=3.5.0"/>
   </engines>
 
-  <asset src="www/hello.js" target="js/hello.js"/>
+  <asset src="www/ilvb.js" target="js/ilvb.js"/>
 
-  <js-module src="www/hello.js" name="hello">
+  <js-module src="www/ilvb.js" name="hello">
     <clobbers target="hello" />
   </js-module>
 
