@@ -10,26 +10,28 @@
   <repo>https://github.com/EaseCloud/cordova-plugin-tencent-ilvb.git</repo>
   <issue>https://github.com/EaseCloud/cordova-plugin-tencent-ilvb/issues</issue>
 
-
   <engines>
     <engine name="cordova" version=">=3.5.0"/>
   </engines>
 
   <asset src="www/ilvb.js" target="js/ilvb.js"/>
 
-  <js-module src="www/ilvb.js" name="TencentILVB">
+  <!-- 这里指定了 js 接口层文件的路径 -->
+  <js-module name="TencentILVB" src="www/ilvb.js">
+    <!-- 这里指定 window.TencentILVB 可以访问到插件的 js 接口层 -->
     <clobbers target="TencentILVB" />
   </js-module>
 
+  <!-- 目前暂时先做 Android，iOS 会有独立的另一个 platform 节点 -->
   <platform name="android">
 
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="TencentILVB">
-        <param name="android-package" value="com.example.plugin.TencentILVB"/>
+        <param name="android-package" value="cn.easecloud.cordova.tencent.TencentILVB"/>
       </feature>
     </config-file>
 
-    <source-file src="src/android/TencentILVB.java" target-dir="src/com/example/plugin/"/>
+    <source-file src="src/android/TencentILVB.java" target-dir="src/cn/easecloud/cordova/tencent/"/>
   </platform>
 
   <!--<platform name="ios">-->

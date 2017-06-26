@@ -1,4 +1,4 @@
-package com.example.plugin;
+package cn.easecloud.cordova.tencent;
 
 import org.apache.cordova.*;
 import org.json.JSONArray;
