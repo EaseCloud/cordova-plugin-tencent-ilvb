@@ -2,7 +2,9 @@ package cn.easecloud.cordova.tencent;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.util.Log;
 import android.webkit.WebView;
@@ -13,6 +15,8 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONException;
 import org.json.JSONTokener;
+
+import com.google.gson.Gson;
 
 import com.tencent.ilivesdk.*;
 import com.tencent.ilivesdk.core.*;
@@ -79,16 +83,18 @@ public class TencentILVB extends CordovaPlugin {
             ILiveLoginManager.getInstance().iLiveLogin(id, sig, new ILiveCallBack() {
                 @Override
                 public void onSuccess(Object data) {
-                    JSONObject json = null;
-                    try {
-                        // object to JSONObject
-                        // https://stackoverflow.com/a/33056323/2544762
-                        json = (JSONObject) (new JSONTokener(data.toString()).nextValue());
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                        callbackContext.error("JSON parse object fail: " + data.toString());
-                    }
-                    callbackContext.success(json);
+//                    JSONObject json = null;
+//                    try {
+//                        // object to JSONObject
+//                        // https://stackoverflow.com/a/33056323/2544762
+//                        json = (JSONObject) (new JSONTokener(data.toString()).nextValue());
+//                    } catch (JSONException e) {
+//                        e.printStackTrace();
+//                        callbackContext.error("JSON parse object fail: " + data.toString());
+//                    }
+//                    callbackContext.success(json);
+                    Gson gson = new Gson();
+                    callbackContext.success(gson.toJson(data));
                 }
 
                 @Override
@@ -103,6 +109,11 @@ public class TencentILVB extends CordovaPlugin {
                         callbackContext.error("ERROR: " + errMsg);
                     }
                     callbackContext.error(obj);
+//                    callbackContext.error(
+//                            "module: " + module +
+//                                    "\nerrCode: " + errCode +
+//                                    "\nerrMsg: " + errMsg
+//                    );
                 }
             });
             return true;
@@ -116,6 +127,23 @@ public class TencentILVB extends CordovaPlugin {
         } else {
             return false;
         }
+    }
+
+    public void alert(String msg, String title) {
+
+
+        // TODO Auto-generated method stub
+
+        new AlertDialog.Builder(this.activity)
+                .setTitle(title)
+                .setMessage(msg)//设置显示的内容
+                .setPositiveButton("确定", new DialogInterface.OnClickListener() {//添加确定按钮
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {//确定按钮的响应事件
+                        // TODO Auto-generated method stub
+//                        finish();
+                    }
+                }).show();//在按键响应事件中显示此对话框
     }
 
 }

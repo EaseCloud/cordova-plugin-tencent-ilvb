@@ -46,6 +46,7 @@
     <source-file src="src/android/libs/ShareSDK-Wechat-Core-2.8.1.jar" target-dir="libs" />
     <source-file src="src/android/libs/ShareSDK-Wechat-Favorite-2.8.1.jar" target-dir="libs" />
     <source-file src="src/android/libs/ShareSDK-Wechat-Moments-2.8.1.jar" target-dir="libs" />
+    <source-file src="src/android/libs/gson-2.6.2.jar" target-dir="libs" />
     <!--<source-file src="src/android/libs/livesdk-1.1.1-sources.jar" target-dir="libs" />-->
     <!--<source-file src="src/android/libs/ilivesdk-1.5.0-sources.jar" target-dir="libs" />-->
 
